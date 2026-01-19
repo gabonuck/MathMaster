@@ -10,39 +10,45 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
-header {
+/* =========================
+   HEADER
+========================= */
+.header {
     background: #000;
     padding: 15px 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
 
-header h1 {
-    font-size: 1.4rem;
+.logo {
+    color: #00ffcc;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-/* NAV */
-nav {
+/* =========================
+   NAV
+========================= */
+.nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-nav a {
+.nav a {
     color: #00ffcc;
     text-decoration: none;
     font-size: 0.95rem;
 }
 
-nav a:hover {
+.nav a:hover {
     text-shadow: 0 0 5px #00ffcc;
 }
 
-/* SECTIONS */
+/* =========================
+   MAIN SECTIONS
+========================= */
 .section {
     padding: 40px 20px;
     max-width: 1100px;
@@ -53,88 +59,15 @@ h1, h2, h3 {
     color: #00ffcc;
 }
 
-/* LISTAS */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* TEXTO SECUNDARIO */
-.nota {
-    font-size: 0.85em;
-    color: #aaa;
-}
-
-/* PRECIOS */
-.precios {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.precio-card {
-    background: #111;
-    padding: 20px;
-    border: 1px solid #00ffcc;
-    width: 100%;
-    max-width: 260px;
-    text-align: center;
-}
-
-/* FORMULARIO */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 500px;
-}
-
-input, textarea, select {
-    padding: 12px;
-    background: #000;
-    border: 1px solid #00ffcc;
-    color: #fff;
-    font-size: 1rem;
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-/* BOTONES */
-button {
-    padding: 14px;
-    background: #00ffcc;
-    color: #000;
+.destacado {
+    margin-top: 20px;
     font-weight: bold;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
+    color: #ffffff;
 }
 
-button:hover {
-    background: #00ddb3;
-}
-
-/* INSTAGRAM */
-.instagram-btn {
-    display: inline-block;
-    margin-top: 15px;
-    color: #000;
-    background: #00ffcc;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
@@ -142,17 +75,21 @@ footer {
     font-size: 0.8em;
 }
 
-/* ========================= */
-/* 📱 MEDIA QUERIES */
-/* ========================= */
-
-/* Tablets */
+/* =========================
+   TABLET
+========================= */
 @media (min-width: 600px) {
-    header h1 {
-        font-size: 1.6rem;
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    nav a {
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .nav a {
         font-size: 1rem;
     }
 
@@ -161,17 +98,15 @@ footer {
     }
 }
 
-/* Desktop */
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 1024px) {
-    header {
-        flex-wrap: nowrap;
-    }
-
     .section {
         padding: 60px 80px;
     }
 
-    .precios {
-        justify-content: flex-start;
+    .logo {
+        font-size: 1.9rem;
     }
 }
