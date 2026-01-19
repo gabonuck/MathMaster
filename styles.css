@@ -18,7 +18,7 @@ body {
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo {
@@ -28,18 +28,18 @@ body {
 }
 
 /* =========================
-   NAV
+   NAV (MOBILE FIRST)
 ========================= */
 .nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .nav a {
     color: #00ffcc;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .nav a:hover {
@@ -47,7 +47,7 @@ body {
 }
 
 /* =========================
-   MAIN SECTIONS
+   SECTIONS
 ========================= */
 .section {
     padding: 40px 20px;
@@ -62,7 +62,89 @@ h1, h2, h3 {
 .destacado {
     margin-top: 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
+}
+
+.nota {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+/* =========================
+   PRECIOS
+========================= */
+.precios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.precio-card {
+    background: #111;
+    padding: 20px;
+    border: 1px solid #00ffcc;
+    text-align: center;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+input,
+textarea,
+select {
+    padding: 12px;
+    background: #000;
+    border: 1px solid #00ffcc;
+    color: #fff;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    padding: 14px;
+    background: #00ffcc;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00ddb3;
+}
+
+/* =========================
+   EXTRAS
+========================= */
+.instagram-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #00ffcc;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto-extra {
+    margin-top: 20px;
+}
+
+.entrega {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #ccc;
 }
 
 /* =========================
@@ -85,16 +167,22 @@ footer {
         align-items: center;
     }
 
-    .logo {
-        font-size: 1.7rem;
-    }
-
-    .nav a {
-        font-size: 1rem;
+    .nav {
+        flex-direction: row;
+        gap: 15px;
     }
 
     .section {
         padding: 50px 40px;
+    }
+
+    .precios {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .precio-card {
+        width: 220px;
     }
 }
 
